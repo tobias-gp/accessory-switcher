@@ -60,3 +60,9 @@ brew install blueutil
 ```
 
 Beyond that, there's no entourage of additional Python libraries needed.
+
+## Todos & Limitations
+
+Currently, this project comes with a dependency to Python, which install many other dependencies. I was looking for a more plain version of Python via Homebrew, but didn't find anything suitable. 
+
+Featurewise, multiple environments are not yet supported (e.g. if you have mutliple workplaces).
