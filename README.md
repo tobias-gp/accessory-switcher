@@ -1,10 +1,12 @@
 # Display <> Bluetooth Accessory Switcher
 
-Ever felt like a DJ, juggling between multiple MacBooks, each with its own Magic Keyboard and Trackpad? Well, it's time to drop the beat and let the Accessory Switcher take over the stage!
+Ever felt like a DJ, juggling between multiple MacBooks, each with its own Magic Keyboard, Magic Trackpad, and Sonos speakers? Well, it's time to drop the beat and let the Accessory Switcher take over the stage!
 
 This nifty tool is like a backstage manager for your Bluetooth devices. It ensures your Bluetooth keyboard and mouse are always connected to the right MacBook when you're plugging in or unplugging a display device via USB-C. No more awkward pauses during your productivity concert!
 
 ## Installation
+
+The tool requires Python3 for executing, but the Python homebrew distribution is too bloated and I didn't want to include it in the package. Make sure to have a `python3` executable in your PATH (no additional libraries needed). If you haven't, you can install it via `brew install python3`. 
 
 Installing the Display <> Bluetooth Accessory Switcher is as easy as 1-2-3:
 
@@ -16,14 +18,14 @@ Installing the Display <> Bluetooth Accessory Switcher is as easy as 1-2-3:
    ```
    brew install accessory-switcher
    ```
-3. Update your Homebrew playlist:
+3. Start the playlist:
    ```
    brew services start accessory-switcher
    ```
 
 ## Configuration
 
-During its first performance, the Display <> Bluetooth Accessory Switcher will create a sample configuration file at `$HOME/.accessoryswitcher/config`: 
+During its first performance, the Display <> Bluetooth Accessory Switcher will create a sample configuration file at `$HOME/.accessoryswitcher/config`, which you will have to change according to your setup: 
 
 ```
 [DEFAULT]
@@ -53,16 +55,10 @@ system_profiler SPDisplaysDataType
 
 ## Backstage
 
-My journey to find the perfect Python Bluetooth libraries turned out to be more of a wild goose chase. So, I turned to blueutil as a trusty sidekick for this formula. 
-
-```
-brew install blueutil
-```
+My journey to find the perfect Python Bluetooth libraries turned out to be more of a wild goose chase. So, I turned to blueutil as a trusty sidekick for this formula. It comes preinstalled as a dependency of the homebrew formula.
 
 Beyond that, there's no entourage of additional Python libraries needed.
 
 ## Todos & Limitations
 
-Currently, this project comes with a dependency to Python, which install many other dependencies. I was looking for a more plain version of Python via Homebrew, but didn't find anything suitable. 
-
-Featurewise, multiple environments are not yet supported (e.g. if you have mutliple workplaces).
+- Multiple environments are not yet supported (e.g. if you have mutliple workplaces).
