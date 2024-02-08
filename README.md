@@ -12,13 +12,13 @@ Installing the Display <> Bluetooth Accessory Switcher is as easy as 1-2-3:
    ```
    brew tap tobias-gp/accessory-switcher
    ```
-2. Update your Homebrew playlist:
-   ```
-   brew update
-   ```
-3. Install the star of the show:
+2. Install the star of the show:
    ```
    brew install accessory-switcher
+   ```
+3. Update your Homebrew playlist:
+   ```
+   brew services start accessory-switcher
    ```
 
 ## Configuration
