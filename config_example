@@ -1,0 +1,4 @@
+[DEFAULT]
+devices=00-00-00-00-00-00,00-00-00-00-00-00
+display_name=Display Name
+sleep_time_in_s=5
